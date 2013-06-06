@@ -1,0 +1,31 @@
+<!-- BEGIN: main -->
+<script type="text/javascript">
+jQuery.jribbble.getPlayerById('{titre}', function(player){
+	var div = jQuery('#dribbble_{titre}');
+	div.find('h3').html(player.name+' / '+player.location);
+	div.find('h4 a').attr('href', player.url).html(player.url);
+	jQuery.jribbble.getShotsByPlayerId('{titre}', function(data){
+		console.log(data);
+		if(data.shots.length) {
+			var sdiv = div.find('div');
+			var li = [];
+			for(var i in data.shots) {
+				var s = data.shots[i];
+				var liContent = '<li><h3>'+s.title+'</h3><h4>Vu '+s.views_count+' fois<br/>';
+				liContent += s.comments_count+' commentaire'+(s.comments_count>1?'s':'')+'</h4>';
+				liContent += '<a href="'+s.url+'"><img src="'+s.image_teaser_url+'" alt=""></a></li>';
+				li.push(liContent);
+			}
+			sdiv.append('<ul class="">'+li.join('')+'</ul>');
+		}
+		div.show();
+	}, {per_page: '{sstitre}'});
+});
+</script>
+<div class="shotList" style="display:none;" id="dribbble_{titre}">
+	<img src="http://dribbble.com/images/dribbble-tm.png" alt=""/>
+	<h3></h3>
+	<h4><a href="" target="_blank"></a></h4>
+	<div></div>
+</div>
+<!-- END: main -->

@@ -1,0 +1,131 @@
+.playerProfile {
+    color: #353535;
+	margin-bottom: 2em;
+	border: 3px solid #ccc;
+	border-radius: 5px;
+	padding: 8px;
+	padding-bottom: 0px;
+	position: relative;
+}
+.playerProfile div a {
+    background-color: #EBEBEB;
+    display: inline-block;
+    float: left;
+    margin-right: 0.8em;
+    padding: 0.4em;
+}
+.playerProfile div a img {
+    display: block;
+}
+.playerProfile > img {
+    position: absolute;
+	top: -32px;
+	right: 10px;
+	background-color: #ccc;
+	padding: 3px;
+	border-radius: 5px;
+}
+.playerProfile div {
+    margin-top: 0.4em;    
+}
+.playerProfile h3 {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    line-height: 0.8em;
+    margin-bottom: 0.2em;
+}
+.playerProfile h4 {
+    font: 0.9em "botanika-mono-web-1","botanika-mono-web-2",monospace,sans-serif !important;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.4em;
+}
+.playerProfile li {
+    font-size: 0.95em;
+    padding: 0.15em 0;
+}
+.playerProfile b {
+    display: inline-block;
+    min-width: 5em;
+    width: 40%;
+}
+
+
+.shotList {
+    display: inline-block;
+	width: 100%;
+	border: 3px solid #ccc;
+	border-radius: 5px;
+	position: relative;
+	margin-bottom: 2em;
+}
+.shotList > img {
+    position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #ccc;
+	padding: 3px;
+	border-bottom-left-radius: 5px;
+}
+.shotList h3 {
+    font-size: 1.3em !important;
+    font-weight: 700;
+    line-height: 0.8em;
+    margin-bottom: 0.2em;
+	padding: 2%;
+}
+.shotList h4 {
+    font: 1.1em "botanika-mono-web-1","botanika-mono-web-2",monospace,sans-serif !important;
+	padding-left: 2%;
+	margin: 0;
+}
+.shotList ul {
+	padding: 2%;
+}
+.shotList li {
+    background-color: #EBEBEB;
+    display: block;
+    float: left;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    overflow: hidden;
+    padding: 0.4em;
+    position: relative;
+}
+.shotList li a {
+    display: block;
+    max-height: 152px;
+    min-height: 152px;
+    overflow: hidden;
+}
+.shotList li img {
+    display: block;
+    margin: 0 auto;
+    transition-duration: 0.15s;
+    transition-property: opacity;
+}
+.shotList li h3, .shotList li h4 {
+    position: absolute;
+    visibility: hidden;
+}
+.shotList li h3 {
+    font-size: 1.05em;
+    font-weight: 700;
+    left: 0.8em;
+    line-height: 1.2em;
+    top: 0.9em;
+    width: 90%;
+}
+.shotList li h4 {
+    bottom: 0.9em;
+    color: #4F4F4F;
+    font: 1em/1.2em "botanika-mono-web-1","botanika-mono-web-2",monospace,sans-serif;
+    text-align: right;
+    width: 90%;
+}
+.shotList li:hover h3, .shotList li:hover h4 {
+    visibility: visible;
+	opacity: 1;
+}
+.shotList li:hover img {
+	opacity: 0.1;
+}

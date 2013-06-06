@@ -1,0 +1,32 @@
+<!-- BEGIN: main -->
+<script type="text/javascript">
+jQuery.jribbble.getPlayerById('{titre}', function(data){
+	var div = jQuery('#dribbble_{titre}');
+	div.find('div a').attr('href', data.url);
+	if(data.avatar_url) {
+		div.find('div a').append('<img src="'+data.avatar_url.replace('normal', 'small')+'" alt=""/>');
+	}
+	div.find('h3').html(data.name+' / '+data.location);
+	div.find('h4 a').attr('href', data.url).html(data.url);
+	div.find('li:eq(0)').html('<b>Shots: </b>'+data.shots_count);
+	div.find('li:eq(1)').html('<b>Following: </b>'+data.following_count);
+	div.find('li:eq(2)').html('<b>Followers: </b>'+data.followers_count);
+	div.find('li:eq(3)').html('<b>Liked: </b>'+data.likes_received_count);
+	div.show();
+});
+</script>
+<div class="playerProfile" style="display:none;" id="dribbble_{titre}">
+	<img src="http://dribbble.com/images/dribbble-tm.png" alt=""/>
+	<h3></h3>
+	<h4><a href="" target="_blank"></a></h4>
+	<div>
+		<a href="" target="_blank"></a>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+<!-- END: main -->

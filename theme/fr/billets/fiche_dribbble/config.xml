@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE type SYSTEM "http://www.kiubi-admin.com/DTD/typesbillets.dtd">
+	<type tri="1">
+		<desc>Fiche Dribbble</desc>
+		<listechamps>
+			<champ champ="titre" type="text" intitule="Identifiant Dribbble" />
+		</listechamps>
+	</type>
